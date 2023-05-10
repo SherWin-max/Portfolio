@@ -3,11 +3,11 @@ const path = require('path');
 const app = express();
 
 // Serve static files from the public directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/assets')));
 
 // Serve index.html as the default page
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, '/assets', 'index.html'));
 });
 
 // Start the server
